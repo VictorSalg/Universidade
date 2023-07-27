@@ -12,6 +12,57 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaCadastrarDespesas(object):
+    """
+    Classe para configurar a interface gráfica da tela de cadastro de despesas.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    btnVoltar : QtWidgets.QPushButton
+        Botão para voltar à tela anterior.
+
+    labelCadastro : QtWidgets.QLabel
+        Rótulo da tela de cadastro de despesas.
+
+    btnCadastrar : QtWidgets.QPushButton
+        Botão para cadastrar a despesa.
+
+    dateEdit : QtWidgets.QDateEdit
+        Campo de edição de data.
+
+    labelNome : QtWidgets.QLabel
+        Rótulo do campo de nome/descrição da despesa.
+
+    labelData : QtWidgets.QLabel
+        Rótulo do campo de data da despesa.
+
+    labelQuantia : QtWidgets.QLabel
+        Rótulo do campo de quantia da despesa.
+
+    labelCategoria : QtWidgets.QLabel
+        Rótulo do campo de categoria da despesa.
+
+    lineEditNome : QtWidgets.QLineEdit
+        Campo de edição para inserir o nome/descrição da despesa.
+
+    lineEditQuantia : QtWidgets.QLineEdit
+        Campo de edição para inserir a quantia da despesa.
+
+    comboBox : QtWidgets.QComboBox
+        Combobox para selecionar a categoria da despesa.
+
+    Methods
+    -------
+    setupUi(self, TelaCadastrarDespesas)
+        Configura a interface gráfica da tela de cadastro de despesas.
+
+    retranslateUi(self, TelaCadastrarDespesas)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaCadastrarDespesas):
         """
         Configura a interface gráfica da tela de cadastro de despesas.

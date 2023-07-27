@@ -3,6 +3,66 @@ import threading
 import datetime
 
 class Despesas():
+    """
+    Classe para manipulação de dados das despesas e receitas dos usuários.
+
+    ...
+
+    Attributes
+    ----------
+    conexao : mysql.connector.connection.MySQLConnection
+        A conexão com o banco de dados MySQL.
+
+    cursor : mysql.connector.cursor.MySQLCursor
+        O cursor usado para executar comandos SQL.
+
+    sinc : threading.Lock
+        Um lock para sincronizar o acesso a recursos compartilhados entre threads.
+
+    Methods
+    -------
+    __init__(self)
+        Inicializa a conexão com o banco de dados e cria as tabelas se não existirem.
+
+    add_conta(self, nome, cpf, usuario, senha)
+        Adiciona uma nova conta de usuário ao banco de dados.
+
+    cad_desp(self, usuario_id, nome, data, quantia, categoria)
+        Registra uma nova despesa no banco de dados.
+
+    login(self, usuario, senha)
+        Realiza o login de um usuário no sistema.
+
+    obterIdUsuario(self, nome_usuario)
+        Obtém o ID de um usuário com base no nome de usuário.
+
+    obterIdUsuario2(self, nome_usuario)
+        Obtém o ID de um usuário com base no nome de usuário.
+
+    verificarCPF(self, cpf)
+        Verifica se um CPF já está cadastrado no banco de dados.
+
+    verificarUsuario(self, usuario, senha=None, UserPassword=True)
+        Verifica se um nome de usuário já está cadastrado no banco de dados.
+
+    inserir(self, usuario_id, data, valor)
+        Insere uma nova receita no banco de dados.
+
+    mostrar_despesas(self, usuario_id, mes, ano)
+        Obtém as despesas de um usuário para um determinado mês e ano.
+
+    mostrar_receita(self, usuario_id, mes, ano)
+        Obtém as receitas de um usuário para um determinado mês e ano.
+
+    saldo(self, usuario_id, mes, ano)
+        Calcula o saldo de um usuário para um determinado mês e ano.
+
+    receita(self, usuario_id, mes, ano)
+        Obtém o total de receitas de um usuário para um determinado mês e ano.
+
+    despesas(self, usuario_id, mes, ano)
+        Obtém o total de despesas de um usuário para um determinado mês e ano.
+    """
     def __init__(self):
         """
         Inicializa a conexão com o banco de dados e cria as tabelas se não existirem.

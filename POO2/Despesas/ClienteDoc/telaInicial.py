@@ -12,6 +12,45 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaInicial(object):
+    """
+    Classe para configurar a interface gráfica da tela inicial.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    btnLogin : QtWidgets.QPushButton
+        Botão para efetuar login.
+
+    btnCadastrar : QtWidgets.QPushButton
+        Botão para ir à tela de cadastro.
+
+    label : QtWidgets.QLabel
+        Rótulo da tela de controle de despesas.
+
+    lineEditUser : QtWidgets.QLineEdit
+        Campo de edição para inserir o nome de usuário.
+
+    labelNome : QtWidgets.QLabel
+        Rótulo para o campo de edição de nome de usuário.
+
+    labelNome_2 : QtWidgets.QLabel
+        Rótulo para o campo de edição de senha.
+
+    lineEditSenha : QtWidgets.QLineEdit
+        Campo de edição para inserir a senha do usuário.
+
+    Methods
+    -------
+    setupUi(self, TelaInicial)
+        Configura a interface gráfica da tela inicial.
+
+    retranslateUi(self, TelaInicial)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaInicial):
         """
         Configura a interface gráfica da tela inicial.

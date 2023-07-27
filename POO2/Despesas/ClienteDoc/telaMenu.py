@@ -12,6 +12,45 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaMenu(object):
+    """
+    Classe para configurar a interface gráfica da tela de menu.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    btnCadastrarDesp : QtWidgets.QPushButton
+        Botão para cadastrar despesas.
+
+    btnVerificarMes : QtWidgets.QPushButton
+        Botão para verificar despesas por mês.
+
+    btnVerificarSaldo : QtWidgets.QPushButton
+        Botão para verificar saldo.
+
+    labelCadastro : QtWidgets.QLabel
+        Rótulo da tela de menu.
+
+    btnSair : QtWidgets.QPushButton
+        Botão para sair do programa.
+
+    btnVoltar : QtWidgets.QPushButton
+        Botão para voltar à tela anterior.
+
+    btnInserirReceita : QtWidgets.QPushButton
+        Botão para inserir receita.
+
+    Methods
+    -------
+    setupUi(self, TelaMenu)
+        Configura a interface gráfica da tela de menu.
+
+    retranslateUi(self, TelaMenu)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaMenu):
         """
         Configura a interface gráfica da tela de menu.

@@ -12,6 +12,45 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaInserirReceita(object):
+    """
+    Classe para configurar a interface gráfica da tela de inserção de receita.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    btnVoltar : QtWidgets.QPushButton
+        Botão para voltar à tela anterior.
+
+    btnInserir : QtWidgets.QPushButton
+        Botão para inserir a receita.
+
+    labelQuantia : QtWidgets.QLabel
+        Rótulo para o campo de edição da quantia da receita.
+
+    lineEditQuantia : QtWidgets.QLineEdit
+        Campo de edição para inserir a quantia da receita.
+
+    labelCadastro : QtWidgets.QLabel
+        Rótulo da tela de inserção de receita.
+
+    labelData : QtWidgets.QLabel
+        Rótulo para o campo de edição da data da receita.
+
+    dateEdit : QtWidgets.QDateEdit
+        Campo de edição para inserir a data da receita.
+
+    Methods
+    -------
+    setupUi(self, TelaInserirReceita)
+        Configura a interface gráfica da tela de inserção de receita.
+
+    retranslateUi(self, TelaInserirReceita)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaInserirReceita):
         """
         Configura a interface gráfica da tela de inserção de receita.

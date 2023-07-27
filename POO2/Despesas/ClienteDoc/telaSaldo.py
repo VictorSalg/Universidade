@@ -12,6 +12,57 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaSaldo(object):
+    """
+    Classe para configurar a interface gráfica da tela de verificação de saldo.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    labelCadastro : QtWidgets.QLabel
+        Rótulo da tela de verificação de saldo.
+
+    labelNome : QtWidgets.QLabel
+        Rótulo para exibir a receita.
+
+    labelNome_2 : QtWidgets.QLabel
+        Rótulo para exibir o saldo.
+
+    labelNome_3 : QtWidgets.QLabel
+        Rótulo para exibir as despesas.
+
+    btnBuscar : QtWidgets.QPushButton
+        Botão para buscar informações.
+
+    btnVoltar : QtWidgets.QPushButton
+        Botão para voltar à tela anterior.
+
+    lineEditSaldo : QtWidgets.QLineEdit
+        Campo de edição para exibir o saldo.
+
+    lineEditDespesas : QtWidgets.QLineEdit
+        Campo de edição para exibir as despesas.
+
+    lineEditReceita : QtWidgets.QLineEdit
+        Campo de edição para exibir a receita.
+
+    tableView : QtWidgets.QTableView
+        Tabela para exibir informações.
+
+    dateEdit : QtWidgets.QDateEdit
+        Campo de edição para selecionar a data.
+
+    Methods
+    -------
+    setupUi(self, TelaSaldo)
+        Configura a interface gráfica da tela de verificação de saldo.
+
+    retranslateUi(self, TelaSaldo)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaSaldo):
         """
         Configura a interface gráfica da tela de verificação de saldo.

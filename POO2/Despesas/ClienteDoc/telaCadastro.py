@@ -12,6 +12,57 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaCadastro(object):
+    """
+    Classe para configurar a interface gráfica da tela de cadastro.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    labelCadastro : QtWidgets.QLabel
+        Rótulo da tela de cadastro.
+
+    labelNome : QtWidgets.QLabel
+        Rótulo do campo de nome.
+
+    labelNome_2 : QtWidgets.QLabel
+        Rótulo do campo de CPF.
+
+    labelNome_3 : QtWidgets.QLabel
+        Rótulo do campo de usuário.
+
+    labelNome_4 : QtWidgets.QLabel
+        Rótulo do campo de senha.
+
+    btnCadastrar : QtWidgets.QPushButton
+        Botão para cadastrar.
+
+    btnVoltar : QtWidgets.QPushButton
+        Botão para voltar à tela anterior.
+
+    lineEditCPF : QtWidgets.QLineEdit
+        Campo de edição para inserir o CPF.
+
+    lineEditUser : QtWidgets.QLineEdit
+        Campo de edição para inserir o usuário.
+
+    lineEditSenha : QtWidgets.QLineEdit
+        Campo de edição para inserir a senha.
+
+    lineEditNome : QtWidgets.QLineEdit
+        Campo de edição para inserir o nome.
+
+    Methods
+    -------
+    setupUi(self, TelaCadastro)
+        Configura a interface gráfica da tela de cadastro.
+
+    retranslateUi(self, TelaCadastro)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaCadastro):
         """
         Configura a interface gráfica da tela de cadastro.

@@ -3,6 +3,27 @@ from despesas import Despesas
 import threading
 
 class ClienteThread(threading.Thread):
+    """
+    Classe para manipulação de threads do cliente.
+
+    ...
+
+    Attributes
+    ----------
+    clientSock : socket.socket
+        O socket do cliente.
+
+    clientAddress : tuple
+        O endereço do cliente (IP, porta).
+
+    Methods
+    -------
+    __init__(self, clientSock, clientAddress)
+        Inicializa a thread do cliente.
+
+    run(self)
+        Executa a thread do cliente.
+    """
     def __init__(self, clientSock, clientAddress):
         """
         Inicializa a thread do cliente.
@@ -37,6 +58,24 @@ class ClienteThread(threading.Thread):
             print('Error')
 
 class Servidor():
+    """
+    Classe para criar e gerenciar o servidor.
+
+    ...
+
+    Attributes
+    ----------
+    serv_socket : socket.socket
+        O socket do servidor.
+
+    Methods
+    -------
+    __init__(self)
+        Inicializa o servidor.
+
+    start(self)
+        Inicia o servidor e aguarda conexões dos clientes.
+    """
     def __init__(self):
         """
         Inicializa o servidor.

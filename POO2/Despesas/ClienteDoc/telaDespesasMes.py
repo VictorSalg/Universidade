@@ -12,6 +12,39 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaDespesasMes(object):
+    """
+    Classe para configurar a interface gráfica da tela de despesas por mês.
+
+    ...
+
+    Attributes
+    ----------
+    centralwidget : QtWidgets.QWidget
+        Widget central da janela.
+
+    btnVoltar : QtWidgets.QPushButton
+        Botão para voltar à tela anterior.
+
+    dateEdit : QtWidgets.QDateEdit
+        Campo de edição para selecionar o mês.
+
+    tableView : QtWidgets.QTableView
+        Tabela de exibição para as despesas do mês selecionado.
+
+    label : QtWidgets.QLabel
+        Rótulo da tela para seleção do mês.
+
+    btnBuscar : QtWidgets.QPushButton
+        Botão para buscar as despesas do mês selecionado.
+
+    Methods
+    -------
+    setupUi(self, TelaDespesasMes)
+        Configura a interface gráfica da tela de despesas por mês.
+
+    retranslateUi(self, TelaDespesasMes)
+        Traduz os textos exibidos na interface gráfica.
+    """
     def setupUi(self, TelaDespesasMes):
         """
         Configura a interface gráfica da tela de despesas por mês.

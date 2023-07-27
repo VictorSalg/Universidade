@@ -15,7 +15,36 @@ from telaDespesasMes import TelaDespesasMes
 from telaSaldo import TelaSaldo
 
 class PandasModel(QAbstractTableModel):
+    """
+    Modelo personalizado para exibir dados do pandas DataFrame em uma QTableView.
+    
+    ...
+
+    Attributes
+    ----------
+    _data : pandas.DataFrame
+        Os dados a serem exibidos no modelo.
+
+    Methods
+    -------
+    rowCount(parent=None)
+        Retorna o número de linhas do modelo.
+
+    columnCount(parent=None)
+        Retorna o número de colunas do modelo.
+
+    data(index, role=Qt.DisplayRole)
+        Retorna os dados correspondentes a um índice no modelo.
+    """
     def __init__(self, data):
+        """
+        Modelo personalizado para exibir dados do pandas DataFrame em uma QTableView.
+
+        Parameters
+        ----------
+        data : pandas.DataFrame
+            Os dados a serem exibidos no modelo.
+        """
         QAbstractTableModel.__init__(self)
         self._data = data
 
@@ -73,6 +102,29 @@ class PandasModel(QAbstractTableModel):
         return None
 
 class Ui_Main(QtWidgets.QWidget):
+    """
+    Classe para configurar a interface do usuário principal.
+    ...
+    
+    Attributes
+    ----------
+    server : cliente
+        Instância da classe cliente para se comunicar com o servidor.
+
+    QtStack : QtWidgets.QStackedLayout
+        Layout para gerenciar várias janelas principais.
+
+    stack0, stack1, stack2, stack3, stack4, stack5, stack6 : QtWidgets.QMainWindow
+        Instâncias das janelas principais para empilhar no QtStack.
+
+    telaInicial, telaMenu, telaCadastro, telaCadastrarDespesas, telaInserirReceita, telaDespesasMes, telaSaldo : QWidget
+        Instâncias das telas secundárias da aplicação.
+
+    Methods
+    -------
+    setupUi(Main)
+        Configura a interface do usuário principal.
+    """
     def setupUi(self, Main):
         """
         Configura a interface do usuário principal.
@@ -127,6 +179,70 @@ class Ui_Main(QtWidgets.QWidget):
         self.QtStack.addWidget(self.stack6)
 
 class Main(QMainWindow, Ui_Main):
+    """
+    Classe principal do aplicativo que herda da classe Ui_Main e QMainWindow.
+    Esta classe representa a janela principal do aplicativo.
+    
+    ...
+
+    Attributes
+    ----------
+    usuario_id : int
+        ID do usuário logado.
+
+    user : str
+        Nome do usuário logado.
+
+    passw : str
+        Senha do usuário logado.
+
+    Methods
+    -------
+    __init__(self)
+        Construtor da classe. Inicializa a janela e configura as conexões dos sinais e slots.
+
+    sair()
+        Finaliza a aplicação e encerra a conexão com o servidor.
+
+    BotaoVoltarTelaInicial()
+        Retorna à tela inicial.
+
+    BotaoVoltarTelaMenu()
+        Retorna à tela do menu principal.
+
+    abrirCadastro()
+        Abre a tela de cadastro.
+
+    abrirCadastrarDesp()
+        Abre a tela de cadastro de despesas.
+
+    abrirInserirReceita()
+        Abre a tela de inserção de receita.
+
+    abrirVerificarMes()
+        Abre a tela de verificação de despesas do mês.
+
+    abrirVerificarSaldo()
+        Abre a tela de verificação do saldo.
+
+    BotaoCadastrar()
+        Realiza o cadastro de um novo usuário.
+
+    BotaoLogin()
+        Realiza o login do usuário.
+
+    cadastrarDespesa()
+        Realiza o cadastro de uma nova despesa.
+
+    inserirReceita()
+        Insere uma nova receita.
+
+    BotaoBuscarDesp()
+        Realiza a busca das despesas do mês.
+
+    BotaoBuscarSaldo()
+        Realiza a busca do saldo.
+    """
     def __init__(self):
         super(Main, self).__init__(None)
         self.setupUi(self)
